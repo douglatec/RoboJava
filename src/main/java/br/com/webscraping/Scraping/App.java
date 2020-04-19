@@ -24,11 +24,19 @@ public class App {
 		 * System.out.println(title + "->Rating: " + rating); }
 		 */
 
-		Document document = Jsoup.connect("https://sigef.incra.gov.br/consultar/parcelas/").get();
+		// Get Start SIGEF
 
-		// System.out.println(document.outerHtml());
+		/*
+		 * Document document = Jsoup.connect(
+		 * "https://sigef.incra.gov.br/consultar/parcelas/?termo=&pesquisa_avancada=True&cpf_cnpj=&proprietario=&cns=09.994-5&matricula=&codigo=&protocolo=&credenciado=&vertice=&sncr=")
+		 * .userAgent("Chrome").data("name", "jsoup").get();
+		 */
 
-		// https://sigef.incra.gov.br/consultar/parcelas/?termo=&pesquisa_avancada=True&cpf_cnpj=&proprietario=&cns=09.994-5&matricula=&codigo=&protocolo=&credenciado=&vertice=&sncr=
+		Document document = Jsoup.connect(
+				"https://sigef.incra.gov.br/consultar/parcelas/?termo=&pesquisa_avancada=True&cpf_cnpj=&proprietario=&cns=09.994-5&matricula=&codigo=&protocolo=&credenciado=&vertice=&sncr=")
+				.userAgent("Chrome").data("name", "jsoup").get();
+
+		System.out.println(document.outerHtml());
 
 	}
 }
