@@ -61,9 +61,10 @@ public class App {
 			Document document = Jsoup.connect(urlFormatada).timeout(0).userAgent(USER_AGENT).data("name", "jsoup")
 					.get();
 
-			// localizar a numero da ultima pagina
+		
 			if (ultimaPaginaEncontrada == false) {
 
+				//localizar a numero da ultima pagina
 				Element paginacao = document.getElementsByClass("pagination").first();
 
 				Elements lis = paginacao.selectFirst("ul").getElementsByTag("li");
