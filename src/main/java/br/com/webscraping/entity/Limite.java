@@ -1,4 +1,4 @@
-package br.com.webscraping.Scraping;
+package br.com.webscraping.entity;
 
 public class Limite {
 
