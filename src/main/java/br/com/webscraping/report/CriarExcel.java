@@ -1,4 +1,4 @@
-package br.com.webscraping.Scraping;
+package br.com.webscraping.report;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,6 +10,9 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+
+import br.com.webscraping.entity.Limite;
+import br.com.webscraping.entity.Vertice;
 
 public class CriarExcel {
 
